@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form action="{% url 'epurchase:buy' %}" method="post" >
+		{% csrf_token %}
+			{% for product in products %}
+				{{ product.name }}
+				{{ product.cost }}
+			{% endfor %}
+		<button type="submit">PAY!</button>
+	</form>
+</body>
+</html>
