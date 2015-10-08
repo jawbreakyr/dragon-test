@@ -32,6 +32,9 @@ class BuyView(View):
 
 
 class RedirectView(TemplateView):
+    template_name = 'epurchase/redirect.html'
 
-    def get(self, *args, **k):
-        pass
+    def get_context_data(self, *args, **kwargs):
+        context = super(RedirectView, self).get_context_data(*args, **kwargs)
+
+        return context
