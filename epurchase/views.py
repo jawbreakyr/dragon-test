@@ -38,3 +38,12 @@ class RedirectView(TemplateView):
         context = super(RedirectView, self).get_context_data(*args, **kwargs)
 
         return context
+
+
+class PostBackView(TemplateView):
+    template_name = 'epurchase/postback.html'
+
+    def get_context_data(self, *args, **kwargs):
+        context = super(PostBackView, self).get_context_data(*args, **kwargs)
+
+        return context
